@@ -58,5 +58,7 @@
     <meta name="theme-color" content="#HEX_COLOR_LIGHT">
     <meta name="theme-color" content="#HEX_COLOR_DARK" media="(prefers-color-scheme: dark)">
 
+    <!-- When our browser waits for the CSS file to fully load before applying the styles defined in it, we often get a Flash of Unstyled Text (FOUT). So to avoid this, we use the onload attribute to tell the browser, "apply the styles immediately as soon as the page loads". The "?v=1.0" (query) part is a technique called "cache-busting" and when we visit the web page, our browser caches (saves) our CSS file to improve page load time on subsequent visits. The caveat is that when we update our CSS, the browser may continue to use the cached version, so they see an outdated version of the site. Because we appended a version number to the our URL though, the browser will see it as a new file and re-download it from the server.-->
+    <link rel="stylesheet" href="/fonts/fonts.css?v=1.0" onload="this.media='all'">
   </head>
 </html>
