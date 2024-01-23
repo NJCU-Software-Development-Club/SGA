@@ -1,0 +1,113 @@
+/* 
+*  TABLE OF CONTENTS
+*   
+*  1.0 - Fonts
+*  2.0 - Design Tokens - Typescale, Color Theme, Fonts, Tracking, Gutter, etc... 
+*  To Update As Needed...
+*/
+
+/* ------------------------------
+   ------------------------------
+   1. FONTS
+   ------------------------------
+   ------------------------------ */
+
+   @import url('https://fonts.googleapis.com/css2?family=Alef&family=Lobster&family=Tenor+Sans&display=swap');
+
+/* ------------------------------
+   ------------------------------
+   2. Design Tokens
+   ------------------------------
+   ------------------------------ */
+
+:root {
+    /* Our Modular Scales: https://utopia.fyi/ */
+
+    /* Step -10: 1.93px → 3.44px */
+    --s--10: clamp(0.1206rem, 0.1081rem + 0.0668vw, 0.215rem);
+
+    /* Step -9: 2.42px → 4.29px */
+    --s--9: clamp(0.1513rem, 0.1357rem + 0.0827vw, 0.2681rem);
+
+    /* Step -8: 3.02px → 5.37px */
+    --s--8: clamp(0.1888rem, 0.1693rem + 0.104vw, 0.3356rem);
+
+    /* Step -7: 3.77px → 6.71px */
+    --s--7: clamp(0.2356rem, 0.2112rem + 0.1301vw, 0.4194rem);
+
+    /* Step -6: 4.72px → 8.39px */
+    --s--6: clamp(0.295rem, 0.2646rem + 0.1624vw, 0.5244rem);
+
+    /* Step -5: 5.90px → 10.49px */
+    --s--5: clamp(0.3688rem, 0.3307rem + 0.2031vw, 0.6556rem);
+
+    /* Step -4: 7.37px → 13.11px */
+    --s--4: clamp(0.4606rem, 0.413rem + 0.254vw, 0.8194rem);
+
+    /* Step -3: 9.22px → 16.38px */
+    --s--3: clamp(0.5763rem, 0.5168rem + 0.3168vw, 1.0238rem);
+
+    /* Step -2: 11.52px → 20.48px */
+    --s--2: clamp(0.72rem, 0.6457rem + 0.3965vw, 1.28rem);
+
+    /* Step -1: 14.40px → 25.60px */
+    --s--1: clamp(0.9rem, 0.8071rem + 0.4956vw, 1.6rem);
+
+    /* Step 0: 18.00px → 32.00px */
+    --s0: clamp(1.125rem, 1.0088rem + 0.6195vw, 2rem);
+
+    /* Step 1: 22.50px → 40.00px */
+    --s1: clamp(1.4063rem, 1.2611rem + 0.7743vw, 2.5rem);
+
+    /* Step 2: 28.13px → 50.00px */
+    --s2: clamp(1.7581rem, 1.5767rem + 0.9677vw, 3.125rem);
+
+    /* Step 3: 35.16px → 62.50px */
+    --s3: clamp(2.1975rem, 1.9707rem + 1.2097vw, 3.9063rem);
+
+    /* Step 4: 43.95px → 78.13px */
+    --s4: clamp(2.7469rem, 2.4633rem + 1.5124vw, 4.8831rem);
+
+    /* Step 5: 54.93px → 97.66px */
+    --s5: clamp(3.4331rem, 3.0786rem + 1.8907vw, 6.1038rem);
+
+    /* Step 6: 68.66px → 122.07px */
+    --s6: clamp(4.2913rem, 3.8481rem + 2.3633vw, 7.6294rem);
+
+    /* Step 7: 85.83px → 152.59px */
+    --s7: clamp(5.3644rem, 4.8105rem + 2.954vw, 9.5369rem);
+
+    /* Step 8: 107.29px → 190.73px */
+    --s8: clamp(6.7056rem, 6.0134rem + 3.692vw, 11.9206rem);
+
+    /* Step 9: 134.11px → 238.42px */
+    --s9: clamp(8.3819rem, 7.5165rem + 4.6155vw, 14.9013rem);
+
+    /* Step 10: 167.64px → 298.02px */
+    --s10: clamp(10.4775rem, 9.3958rem + 5.769vw, 18.6263rem);
+
+    /* Headings */
+    --font-serif: 'Tenor Sans', sans-serif;
+    /* Paragraphs */
+    --font-base: 'Alef', sans-serif;
+    /* Emphasized Text */
+    --font-emphasis: 'Lobster', sans-serif;
+
+    /* The maximum width of an element in characters, this is equal to the width of an "X" */
+    --measure: 60ch;
+    /* Thickness of a thin border */
+    --border-thin: var(--s0);
+    /* Spacing between elements */
+    --gutter: var(--s0);
+    /* Radius of the border corners */
+    --border-radius: 8px;
+    /* letter spacing for normal text */
+    --tracking: -0.05ch;
+    /* letter spacing for headers */
+    --tracking-s: -0.075ch;
+
+    --vanilla: #F1F7ED;
+    --green: #686850; 
+    --highlight: #F2B792;
+    --dark-grey: #666666;
+}
