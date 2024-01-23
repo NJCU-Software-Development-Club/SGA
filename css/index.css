@@ -12,7 +12,7 @@
    ------------------------------
    ------------------------------ */
 
-   @import url('https://fonts.googleapis.com/css2?family=Alef&family=Lobster&family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alef&family=Lobster&family=Tenor+Sans&display=swap');
 
 /* ------------------------------
    ------------------------------
@@ -107,7 +107,235 @@
     --tracking-s: -0.075ch;
 
     --vanilla: #F1F7ED;
-    --green: #686850; 
+    --green: #686850;
     --highlight: #F2B792;
     --dark-grey: #666666;
+}
+
+* {
+    max-inline-size: var(--measure);
+}
+
+html,
+body,
+div,
+header,
+article,
+nav,
+main,
+footer {
+    max-inline-size: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--TO_EDIT);
+}
+
+/* ------------------------------
+   ------------------------------
+   3. BODY
+   ------------------------------
+   ------------------------------ */
+
+body {
+    font-family: var(--font-base);
+    font-size: var(--s0);
+    letter-spacing: var(--tracking);
+    line-height: 1.4;
+
+    color: var(--text);
+
+    background-color: var(--body-background);
+}
+
+/* ------------------------------
+   ------------------------------
+   4. HEADERS
+   ------------------------------
+   ------------------------------ */
+
+h1,
+h2,
+h3 {
+    /* Limits the width of the headings and prevents them from becoming too long */
+    max-width: 18ch;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    letter-spacing: var(--tracking-s);
+    line-height: 1;
+}
+
+h1 {
+    font-size: var(--s5);
+}
+
+h2 {
+    font-size: var(--s4);
+}
+
+h3 {
+    font-size: var(--s3);
+}
+
+span,
+em {
+    font-family: var(--font-emphasis);
+}
+
+blockquote:not([className]),
+li,
+p {
+    /* Helps to limit the width to improve readability */
+    max-width: 50ch;
+    list-style: none;
+}
+
+/* ------------------------------
+   ------------------------------
+   5. CLASSES
+   ------------------------------
+   ------------------------------ */
+
+
+.squeeze {
+    /* Width and Height should include only the content inside it, excluding padding and border */
+    box-sizing: content-box;
+
+    /* limits the element to take up 80 characters horizontally */
+    max-inline-size: 80ch;
+
+    /* centers the element horizontally by setting the left and right margins to "auto" */
+    margin-inline: auto;
+
+    /* horizontal padding */
+    padding-inline: var(--s0);
+}
+
+.group {
+    /* switch to inline */
+    display: flex;
+
+    /* elements can drop down to be next to each other if there isnt enough space */
+    flex-wrap: wrap;
+
+    /* the spacing between the elements grouped together */
+    gap: var(--s5, 1rem);
+
+    /* center elements horizontally */
+    justify-content: center;
+
+    /* center elements vertically */
+    align-items: center;
+}
+
+.stack {
+    display: flex;
+
+    /* Sets the direction of the flex items to be stacked vertically */
+    flex-direction: column;
+
+    /* Aligns the flex items to the start of the container vertically */
+    justify-content: flex-start;
+}
+
+.stack > * {
+    /* Sets the margin on the block levels (vertical axis) of all direct child elements to 0 */
+    /* We do this to have finer control with our next pseudo selector */
+    margin-block: 0;
+}
+
+.stack > * + * {
+    /* Sets spacing between elements vertically in between each other. 
+        The first value is the default (--s0, the 2nd is a fallback) */
+    margin-block-start: var(--s0, 1.5rem);
+}
+
+/* a flex container. it uses a threshold value and applies flex-grow and flex-basis to the child elements. It will "switch" to be vertical if the element grows bigger than the threshold */
+.switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter, var(--s1));
+    --threshold: 110rem;
+}
+
+/* allows the children of switcher class to grow forever */
+.switcher > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+
+/* A way to "break" into a vertical layout if there are more than 4 elements */
+.switcher> :nth-last-child(n+5),
+.switcher> :nth-last-child(n+5)~* {
+    flex-basis: 100%;
+}
+
+.cover {
+    --space: var(--s1);
+    display: flex;
+    flex-direction: column;
+    /* The vh unit is the percentage of viewport height, 100vh means that the full viewport height will covered */
+    min-block-size: 100vh;
+    padding: var(--s0);
+}
+
+.cover > * {
+    margin-block: var(--s1);
+}
+
+.cover > :first-child:not(h1) {
+    margin-block-start: 0;
+}
+
+.cover > :last-child:not(h1) {
+    margin-block-end: 0;
+}
+
+.cover > * {
+    margin-block: auto;
+}
+
+.frame {
+    --n: NUMBER;
+    /* numerator 16*/
+    --d: NUMBER;
+    /* denominator 9*/
+    aspect-ratio: var(--n) / var(--d);
+    /* If the content inside the .frame container exceeds its dimensions, it will be clipped and hidden from view */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame>img,
+.frame>video {
+    /* the properies below make the image fit inside the container */
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+
+    border-radius: var(--border-radius);
+}
+
+.grid {
+    /* grid context */
+    display: grid;
+    grid-gap: 1rem;
+    /* minimum column width */
+    --minimum: 20ch;
+}
+
+@supports (width: min(var(--minimum), 100%)) {
+    .grid {
+        /* min() function enhancement
+        into multiple columns */
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%),
+                    1fr));
+    }
 }
