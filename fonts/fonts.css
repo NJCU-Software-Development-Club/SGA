@@ -1,0 +1,38 @@
+/* Font stack https://brailleinstitute.org/freefont */
+/* Woff2 gives us a smaller file size and better performance than the alternatives, for modern browsers that support it. - https://css-tricks.com/understanding-web-fonts-getting/#aa-font-formats */
+
+@font-face {
+    font-family: notulen_serif_displayxbd;
+    src: url(/fonts/OUR_FONT_HERE.woff2) format('woff2');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: atkinson_hyperlegible;
+    src: url(/fonts/OUR_FONT_HERE.woff2) format('woff2');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: atkinson_hyperlegible;
+    src: url(/fonts/OUR_FONT_HERE.woff2) format('woff2');
+    font-weight: 700;
+    font-style: italic
+}
+
+@font-face {
+    font-family: atkinson_hyperlegible;
+    src: url(/fonts/OUR_FONT_HERE.woff2) format('woff2');
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: atkinson_hyperlegible;
+    src: url(/fonts/OUR_FONT_HERE.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal
+}
+

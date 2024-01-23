@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Oldie, but goodie - https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/ -->
+    <meta charset="UTF-8">
+
+    <!-- Used to make web pages responsive and ensure that they are displayed correctly on different devices by setting the viewport width and initial zoom level. -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <!-- Tells our browser to use the latest version of the IE rendering engine available. This just ensures that the page is displayed correctly in IE and other modern browsers that support the meta tag. -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ashley Lemon - Coordinator of Leadership and Student Government</title>
+    <!-- Specifies the preferred URL of our webpage among multiple versions of the same page with different URLs. -->
+    <link rel="canonical" href="https://AshleyLemon.com/">
+    
+    <meta name="description" content="Ashley Lemon, Coordinator of Leadership and Student Government" />
+    <meta name="author" content="Ashley Lemon" />
+    <meta name="keywords" content="list of relevant keywords for SEO, comma seperated">
+
+    <!-- Sharing our website as media (copy pasting link) on Facebook/Meta, Instagram, WhatsApp, LinkedIn, and prob some others I don't know. In terms of specifics the Open Graph protocol ("og:" part) crawls our website to display the information on these platforms. -->
+    <meta property="og:site_name" content="Ashley Lemon">
+    <meta property="og:title" content="Ashley Lemon - Coordinator of Leadership and Student Government">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ashleylemon.com/">
+    <meta property="og:description" content="Ashley Lemon, Coordinator of Leadership and Student Government">
+    <meta property="og:image" content="/images/social-avatar.png">
+    <meta property="og:image:alt" content="Page image for Ashleylemon">
+
+    <!-- Sharing our website as media (copy pasting link) but on Twitter -->
+    <meta name="twitter:image" content="/images/social-avatar.png">
+    <meta name="twitter:image:alt" content="Page image for Ashelylemon">
+    <meta name="twitter:description" content="Ashley Lemon, Coordinator of Leadership and Student Government">
+
+    <!-- Below are our Favicons. This saves our icons and displays them in various contexts (different Operating Systems of mobile and desktop), like when we bookmark the site, view it in a browser tab, or save it to our home screen. -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    
+    <!-- The manifest is a JSON file that provides information to the browser about our website, like name, description, icon, and theme color - https://developer.mozilla.org/en-US/docs/Web/Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- For Safari, to customize the appearance of the browser's pinned tabs when a user bookmarks a webpage. Using the mask-icon, the icon will be used instead of the default icon that is displayed on the pinned tab in Safari.-->
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#HEX_COLOR_HERE">
+    
+    <!-- Icon displayed in the browser tab/window title bar when we visit the page -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    
+    <!-- Sets the background color of the tile that appears when we pin the website to our Start menu in Windows Operating System -->
+    <meta name="msapplication-TileColor" content="#HEX_COLOR_HERE">
+    
+    <!-- Specifies the location of the configuration file for Windows-specific settings such as tile images and background color - https://webmasters.stackexchange.com/questions/131077/in-2020-are-browserconfig-xml-and-ieconfig-xml-now-effectively-deprecated -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- This line specifies the color schemes supported by our website (both the light and dark color schemes). -->
+    <meta name="supported-color-schemes" content="light dark">
+    
+    <!-- Default color for the browser UI. The specified color is used for the browser's address bar, tab bar, and other UI elements. -->
+    <meta name="theme-color" content="#HEX_COLOR_LIGHT">
+    <meta name="theme-color" content="#HEX_COLOR_DARK" media="(prefers-color-scheme: dark)">
+
+    <!-- When our browser waits for the CSS file to fully load before applying the styles defined in it, we often get a Flash of Unstyled Text (FOUT). So to avoid this, we use the onload attribute to tell the browser, "apply the styles immediately as soon as the page loads". The "?v=1.0" (query) part is a technique called "cache-busting" and when we visit the web page, our browser caches (saves) our CSS file to improve page load time on subsequent visits. The caveat is that when we update our CSS, the browser may continue to use the cached version, so they see an outdated version of the site. Because we appended a version number to the our URL though, the browser will see it as a new file and re-download it from the server.-->
+    <link rel="stylesheet" href="/fonts/fonts.css?v=1.0" onload="this.media='all'">
+
+    <!-- CSS Reset, brings consistency of different browser's default styling applied to our html elements -->
+    <link rel="stylesheet" href="/css/reset.css">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#studentGov">Student Government Association</a></li>
+          <li><a href="#accomplishments">Accomplishments</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#publications">Awards & Recognition</a></li>
+          <li><a href="#awards">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
